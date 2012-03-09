@@ -17,13 +17,52 @@
         </a>
         <div id="content">
             <style type="text/css" scoped="scoped">
+div.img
+  {
+  margin:2px;
+  border:1px solid #0000ff;
+  height:auto;
+  width:260px;
+  float:left;
+  text-align:center;
+  }
+div.img img
+  {
+  display:inline;
+  margin:3px;
+  border:1px solid #ffffff;
+  width:250px;
+  }
+div.img a:hover img
+  {
+  border:1px solid #0000ff;
+  }
+div.desc
+  {
+  text-align:center;
+  font-weight:normal;
+  width:250px;
+  margin:2px;
+  }
 </style>
 <div>
 <h2>Gallery</h2>
-<div class="image">
-<img src="images/kvs-all.png" alt="Von Karman vortex street behind a cylinder" width="400px">
-<div>Von Karman vortex street behind a cylinder</div>
+
+<div class="img">
+<a href="images/kvs-all.png"><img src="images/kvs-all.png" alt="Von Karman vortex street behind a cylinder"></a>
+<div class="desc">Von Karman vortex street behind a cylinder</div>
 </div>
+
+<div class="img">
+<a href="images/tree.png"><img src="images/tree.png" alt="Component tree view"></a>
+<div class="desc">Component tree view, generated in Python</div>
+</div>
+
+<div class="img">
+<a href="images/tree_with_navigation.png"><img src="images/tree_with_navigation.png" alt="Component tree view"></a>
+<div class="desc">Component tree view, generated in Python and showing details of a node</div>
+</div>
+
 </div>
 </div>
 <div id="footer">
