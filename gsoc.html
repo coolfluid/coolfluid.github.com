@@ -46,18 +46,46 @@ Available mentors are:
 </ul>
 <h3>Extending visualization support</h3>
 Currently, a <a href="http://www.paraview.org/">ParaView</a> plugin exists, allowing to visualize a mesh loaded into the application. The drawback of the current implementation is that it relies on dumping a file to disk, which is then read by the ParaView widget. The system should be evolved so that dumping to disk is no longer necessary. Further options include linking the view with the component tree, so selecting a zone in the tree results in selection changes in the view.
+<h4>Project category</h4>
+This is a fairly advanced C++ project, requiring a thorough study of both the Coolfluid mesh structure and the ParaView architecture. It will most likely also require strong interaction on the ParaView mailing list. 
+<h4>Mentors</h4>
+Bart Janssens, Quentin Gasper
 <h3>Client-Server extensions</h3>
 The Coolfluid 3 GUI uses a client-server architecture, with the server usually running on a compute cluster. Often, such a cluster is organized so that compute nodes are not directly visible from outside of the cluster network. This means that the server must run on the head-node of the cluster, so it is needlessly burdened. One solution to this problem is to provide a "reverse connect" mechanism (as used in ParaView), where the server initiates a connection to the client. The goal of this project would be to provide such a system, as well as adding extra functionality such as parallel simulation control.
+<h4>Project category</h4>
+This is a quite basic project, requiring study of the boost::asio library (which we use for networking) and some MPI programming to handle communication with and spawning of worker nodes.
+<h4>Mentors</h4>
+Quentin Gasper, Tamás Bányai
 <h3>File format support</h3>
 Even though many common formats are supported already, there is always room for improvement. At the top of the list is Exodus II, a high performance parallel file format that we believe to be the most efficient way of exporting to ParaView. Another idea is the implementation of a "restart" format, which would allow dumping a complete simulation to disk and continue running it after reloading the file.
+<h4>Project category</h4>
+An intermediate project, requiring study of a substantial file format specification and it's interface library. The restart format can be considered a separate project and would require a design effort as well as a strong understanding of the component system.
+<h4>Mentors</h4>
+Willem Deconinck, Tiago Quintino
 <h3>Structured mesh generation</h3>
 A fully parallel structured grid generator exists in the code base. The current implementation only supports structured blocks containing straight edges. A natural extension would be to support 3D NURBS blocks, enabling structured grid generation around curved surfaces such as an airfoil.
+<h4>Project category</h4>
+Basic C++ project, requiring some study of NURBS basics. No special use of external libraries is required.
+<h4>Mentors</h4>
+Bart Janssens, Willem Deconinck
 <h3>Unstructured mesh generation</h3>
 Some exploration has been done to use <a href="http://www.cgal.org/Manual/latest/doc_html/cgal_manual/Mesh_3/Chapter_main.html">CGAL mesh generator</a> to generate tetrahedral meshes. The goal of this project would be to arrive at a practical mesher using this library, preferably running in parallel.
+<h4>Project category</h4>
+Intermediate C++ project, requiring exploration of the CGAL mesh generation library. The extension to parallel generation in MPI is considered to be challenging.
+<h4>Mentors</h4>
+Tiago Quintino, Willem Deconinck
 <h3>Finite volume solver implementation</h3>
 Since research so far has focused on relatively modern methods such as Residual Distribution, SUPG and Spectral Differences, a "classic" finite volume solver is currently lacking. Implementing or porting such a solver from the old code base would be a nice project for someone with a fluid dynamics background.
+<h4>Project category</h4>
+Advanced C++ project, requiring thorough knowledge of the mesh structure and prior knowledge of fluid dynamics and numerical discretization. Honestly, not for the faint of heart.
+<h4>Mentors</h4>
+Tiago Quintino, Tamás Bányai
 <h3>Blockmesh data input</h3>
-Support extra input options for the structured grid generator, i.e. read Gmsh generated block data and OpenFOAM blockMeshDict files. Can possibly extended to propose a GUI toolchain for structured grid generation.
+Support extra input options for the structured grid generator, i.e. read Gmsh generated block data and OpenFOAM blockMeshDict files. Should also result in the availability of a toolchain including a GUI for block definition (either reusing something like Gmsh or free 3D software, or roll out your own).
+<h4>Project category</h4>
+Basic C++ project, with a lot of freedom for which directions to choose. Basic study of structured mesh descriptions is necessary.
+<h4>Mentors</h4>
+Tamás Bányai, Bart Janssens
 </div>
 </div>
 <div id="footer">
