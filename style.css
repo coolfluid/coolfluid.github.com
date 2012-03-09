@@ -1,0 +1,243 @@
+/* Based on the style found at http://osxfuse.github.com/ */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#menubar {
+    display: block;
+
+    height: 30px;
+
+    border-bottom: 1px solid #AAAAAA;
+
+    background-color: #F0F0F0;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FAFAFA), to(#EAEAEA));
+
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+}
+
+#menubar > div {
+    display: block;
+
+    position: relative;
+    width: 800px;
+    height: 30px;
+
+    margin: auto;
+}
+
+#menubar ul.menu {
+    margin: 0px;
+    padding: 0px;
+
+    border-left: 1px solid #E8E8E8;
+    border-right: 1px solid #F8F8F8;
+}
+
+#menubar ul.menu li {
+    display: inline-block;
+    line-height: 30px;
+
+    border-left: 1px solid #F8F8F8;
+    border-right: 1px solid #E8E8E8;
+}
+
+#menubar ul.menu a {
+    display: inline-block;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    color: #202020;
+
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    font-family: helvetica, arial, sans-serif;
+
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 250ms;
+}
+
+#menubar ul.menu a:hover {
+    color: #698195;
+}
+
+#header {
+    display: block;
+    position: relative;
+
+    margin: 0px;
+    margin-bottom:30px;
+
+    border: 1px solid #B3BAC2;
+    border-left: none;
+    border-right: none;
+
+    box-shadow: 0px 1px 4px #A0A0A0;
+    background-color: #6E87A0;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#95B1CB), to(#526881));
+
+    padding: 0px;
+
+    text-decoration: none;
+}
+
+#header > h1 {
+    display: block;
+
+    position: relative;
+    width: 720px;
+    height: 60px;
+
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    background-image: url('cf3.png');
+    background-repeat: no-repeat;
+    background-size: 90px;
+
+    padding-left: 100px;
+}
+
+#header > h1 #title {
+    display: inline-block;
+
+    position: relative;
+    top: -5px;
+
+    font-family: helvetica, arial, sans-serif;
+    font-size: 25px;
+    color: white;
+
+    text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0px;
+}
+
+#header > h1 #subtitle {
+    display: inline-block;
+
+    position: relative;
+    top: -18px;
+
+    font-family: helvetica, arial, sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.699219) 0px -1px 0px;
+
+    font-size: 16px;
+    font-weight: 200;
+    color: white
+}
+
+#content {
+    display: table;
+
+    position: relative;
+    width: 800px;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    padding: 0px;
+
+    line-height: 17px;
+
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    color: #484848;
+
+    text-align: justify;
+}
+
+#content h2 {
+    position: relative;
+
+    margin-bottom: 17px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #D0D0D0;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #303030;
+}
+
+#content * + h2 {
+    margin-top: 25px;
+}
+
+#content h3 {
+    position: relative;
+
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    color: #303030;
+}
+
+#content * + h3 {
+    margin-top: 15px;
+}
+
+#content p, #content ul {
+    margin-top: 5px;
+}
+
+#content ul {
+    list-style-type: square;
+}
+
+#content li + li {
+    margin-top: 10px;
+}
+
+#content a {
+    color: #3C75AE;
+
+    text-decoration: none;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+#content code, #content pre {
+    padding: 0px 2px 0px 2px;
+
+    border: 1px solid #D0D0D0;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+
+    font-family: 'courier new', monospace;
+}
+
+#footer {
+    display: block;
+
+    background-color: #FAFAFA;
+
+    border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+#footer div {
+    display: block;
+
+    position: relative;
+    width: 800px;
+
+    margin: auto;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    line-height: 16px;
+
+    font-family: helvetica, arial, sans-serif;
+    font-size: 11px;
+    color: #A0A0A0;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Coolfluid 3</title>
+    </head>
+    <body>
+        <style type="text/css" scoped="scoped">
+            @import url('style.css') screen;
+        </style>
+        <a id="header" href="/">
+            <h1>
+                <span id="title">Coolfluid 3</span>
+                <br>
+                <span id="subtitle">A Collaborative Simulation Environment</span>
+            </h1>
+        </a>
+        <div id="content">
+            <style type="text/css" scoped="scoped">
+</style>
+<div>
+<h2>Google Summer of Code 2012</h2>
+<p>
+Should our organization be accepted, we will offer students the opportunity to work on our team. Even though the Coolfluid 3 framework lives in the context of scientific computing, we do aim to provide an end-user friendly application, which implies that many kinds of tasks need to be performed:
+<ul>
+<li>GUI programming</li>
+<li>Python interface strengthening</li>
+<li>Improving vizualization support</li>
+<li>Improve file format support</li>
+<li>Structured and unstructured grid generation</li>
+<li>Numerical model development</li>
+</ul>
+<p>
+Potential students are free to <a href="http://groups.google.com/group/coolfluid-developers">contact us</a> with their own project proposals, or may use the (non-exhaustive) list below to find inspiration. Any project proposal must be well documented and show that some studying of the code was done before finalizing the application. We encourage you to discuss project ideas early on the mailing list or through the github issue system.
+</p>
+<p>
+Students applying to our organization will benefit from working in a small, dynamic team, with a wealth of scientific and non-scientific programming experience. Through the collaborating institutions, access is available to computing resources, allowing for example scalability testing on a computing cluster environment.
+</p>
+<h3>Extending visualization support</h3>
+Currently, a <a href="http://www.paraview.org/">ParaView</a> plugin exists, allowing to visualize a mesh loaded into the application. The drawback of the current implementation is that it relies on dumping a file to disk, which is then read by the ParaView widget. The system should be evolved so that dumping to disk is no longer necessary.
+<h3>Client-Server extensions</h3>
+The Coolfluid 3 GUI uses a client-server architecture, with the server usually running on a compute cluster. Often, such a cluster is organized so that compute nodes are not directly visible from outside of the cluster network. This means that the server must run on the head-node of the cluster, so it is needlessly burdened. One solution to this problem is to provide a "reverse connect" mechanism (as used in ParaView), where the server initiates a connection to the client. The goal of this project would be to provide such a system, as well as adding extra functionality such as parallel simulation control and better remote file browsing.
+<h3>File format support</h3>
+Even though many common formats are supported already, there is always room for improvement. At the top of the list is Exodus II, a high performance parallel file format that we believe to be the most efficient way of exporting to ParaView.
+<h3>Structured mesh generation</h3>
+A fully parallel structured grid generator exists in the code base. The current implementation only supports structured blocks containing straight edges. A natural extension would be to support 3D NURBS blocks, enabling structured grid generation around curved surfaces such as an airfoil.
+<h3>Unstructured mesh generation</h3>
+Some exploration has been done to use <a href="http://www.cgal.org/Manual/latest/doc_html/cgal_manual/Mesh_3/Chapter_main.html">CGAL mesh generator</a> to generate tetrahedral meshes. THe goal of this project would be to arrive at a practical mesher using this library, preferably running in parallel.
+<h3>Finite volume solver implementation</h3>
+Since research so far has focused on relatively modern methods such as Residual Distribution, SUPG and Spectral Differences, a "classic" finite volume solver is currently lacking. Implementing or porting such a solver from the old code base would be a nice project for someone with a fluid dynamics background.
+</div>
+</div>
+<div id="footer">
+<div>
+  &copy; 2011-2012 The Coolfluid Team
+</div>
+</div>
+</body>
+</html>
