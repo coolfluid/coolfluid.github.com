@@ -17,61 +17,188 @@
         </a>
         <div id="content">
             <style type="text/css" scoped="scoped">
-div.img
+div.left_column
   {
-  margin:2px;
-  border:1px solid #0000ff;
-  height:auto;
-  width:260px;
-  float:left;
-  text-align:center;
+    width:300px;
+    float:left;
   }
+div.right_column
+  { 
+    width:500px;
+    float:left;
+  }
+div.img
+  {    
+/*  margin:5px;*/
+/*  border:1px solid #0000ff;*/
+  height:auto;
+  width:280px;
+  text-align:center;
+  margin-left: 5px;
+  margin-right: 20px;
+  }
+div.new_line{ 
+  clear: left; 
+  }  
 div.img img
   {
   display:inline;
   margin:3px;
   border:1px solid #ffffff;
-  width:250px;
+  width:270px;
   }
 div.img a:hover img
   {
-  border:1px solid #0000ff;
+  border:1px solid #0000ff;  
   }
 div.desc
   {
   text-align:center;
   font-weight:normal;
-  width:250px;
+  width:270px;
   margin:2px;
   }
+div.author
+  {
+    font-style:italic;
+    font-weight:lighter;
+  }
+
 </style>
+
 <div>
 <h2>Gallery</h2>
-
+<h3>UFEM</h3>
+<div class="left_column">
 <div class="img">
 <a href="images/kvs-all.png"><img src="images/kvs-all.png" alt="Von Karman vortex street behind a cylinder"></a>
 <div class="desc">Von Karman vortex street behind a cylinder</div>
 </div>
+</div>
+<div class="right_column">
+<div class="author"> Created by Bart Janssens</div>
+</div>
+<div class="new_line"> <br \></div>
+<div class="new_line"> <br \></div>
 
+<h3>Spectral Difference Method (SDM)</h3>
+
+<h4>Inviscid flow past cylinder, Mach 0.38</h4>
+<div class="left_column">
 <div class="img">
-<a href="images/sdm_euler_cylinder.png"><img src="images/sdm_euler_cylinder.png" alt="Inviscid flow past cylinder, Mach number"></a>
-<div class="desc">Inviscid flow past cylinder, Mach number</div>
+<a href="images/sdm_euler_cylinder.png"><img src="images/sdm_euler_cylinder.png" alt="Inviscid flow past cylinder, Mach number 0.38"></a>
+<div class="desc">Mach contours for inviscid flow past cylinder, Mach 0.38</div>
+</div>
+</div>
+<div class="right_column">
+<p>
+  Simulation of 2D inviscid flow past cylinder  with Mach=0.38. <br \><br \>
+  Euler equations are solved with a 3rd order Spectral Difference method on a 1024-element quadrangular P2-mesh.
+  Time integration is done with Backward Euler, solved by a non-linear LU-SGS iterative solver.<br \>
+  <br \>
+  High-order visualization is done with Gmsh.
+  <div class="author"> Created by Willem Deconinck</div>
+</p>
 </div>
 
+<div class="new_line"> <br \></div>
+
+<h4>Acoustic pulse with vortex</h4>
+
+<div class="left_column">
 <div class="img">
 <a href="images/sdm_lineuler_acousticpulse.png"><img src="images/sdm_lineuler_acousticpulse.png" alt="Acoustic pulse with vortex"></a>
-<div class="desc">Acoustic pulse with vortex</div>
+<div class="desc">Density for acoustic pulse with vortex</div>
+</div>
+</div>
+<div class="right_column">
+<p> 
+  Simulation of an acoustic pulse and a vortex, in a mean-flow with Mach=0.5. This is a benchmark case to test the accuracy and outflow-boundary condition for the linearized Euler equations.<br \><br \>
+  Linearized Euler equations (LEE) are solved with a 4th order Spectral Difference method on a 50x50 Cartesian mesh.
+  Time integration is done with Explicit Runge-Kutta (4,4) in low-storage form. <br \>
+  <br \>
+  High-order visualization is done with Gmsh.
+  <div class="author"> Created by Willem Deconinck</div>
+</p>
 </div>
 
+<div class="new_line"> <br \></div>
+
+<h4>Inviscid flow past wedge, Mach 0.38</h4>
+<div class="left_column">
+<div class="img">
+<a href="images/sdm_euler_wedge.png"><img src="images/sdm_euler_wedge.png" alt="Inviscid flow past cylinder, Mach number 0.38"></a>
+<div class="desc">Density for inviscid flow past wedge, Mach 0.2</div>
+</div>
+</div>
+<div class="right_column">
+<p>
+  Simulation of 2D inviscid flow past triangular wedge  with Mach=0.2. 
+  Vortex shedding occurs due to numerical viscosity at the sharp trailing edges of the wedge. <br \>
+  <br \>
+  Euler equations are solved with a 4th order Spectral Difference method on a 11,686-element quadrangular mesh.
+  Time integration is done with a SD-optimized Explicit Runge-Kutta (18,4) method.<br \>
+  <br \>
+  High-order visualization is done with Gmsh.
+  <div class="author"> Created by Willem Deconinck, Matteo Parsani</div>
+</p>
+</div>
+
+<div class="new_line"> <br \></div>
+
+<h4>Mach-cone, Mach 1.5</h4>
+<div class="left_column">
+<div class="img">
+<a href="images/sdm_lineuler_machcone3d.png"><img src="images/sdm_lineuler_machcone3d.png" alt="Inviscid flow past cylinder, Mach number 0.38"></a>
+<div class="desc">Pressure contours in 2 slices of the domain, Mach number 1.5</div>
+</div>
+</div>
+<div class="right_column">
+<p>
+  Simulation of 3D monopole source term in a background flow with Mach=1.5
+  Because of the supersonic background flow, the typical mach-cone becomes visible. <br \>
+  <br \>
+  The Linearized Euler equations (LEE) are solved with a 5th order Spectral Difference method on a 10x10x10-element hexahedral mesh.
+  Time integration is done with a low-storage Explicit Runge-Kutta (3,3) method.
+  <br \>
+  High-order visualization is done by interpolating the high-order polynomial solution from the 10x10x10-element mesh to a 
+  fine 100x100x100-element mesh and exporting to Tecplot.
+  <div class="author"> Created by Willem Deconinck</div>
+</p>
+</div>
+
+<div class="new_line"> <br \></div>
+<div class="new_line"> <br \></div>
+
+<h3>Coolfluid Kernel API</h3>
+
+<h4>Component structure of a typical 2D mesh</h4>
+<div class="left_column">
 <div class="img">
 <a href="images/tree.png"><img src="images/tree.png" alt="Component tree view"></a>
 <div class="desc">Component tree view, generated in Python</div>
 </div>
-
-<div class="img">
-<a href="images/tree_with_navigation.png"><img src="images/tree_with_navigation.png" alt="Component tree view"></a>
-<div class="desc">Component tree view, generated in Python and showing details of a node</div>
 </div>
+<div class="right_column">
+<div class="author"> Created by Tamas Banyai</div>
+</div>
+
+
+
+<div class="new_line"> <br \></div>
+
+<h4>Detailed information of a Component</h4>
+<div class="left_column">
+<div class="img">
+  <a href="images/tree_with_navigation.png"><img src="images/tree_with_navigation.png" alt="Component tree view"></a>
+  <div class="desc">Component tree view, generated in Python and showing details of a node</div>
+</div>
+</div>
+<div class="right_column">
+<div class="author"> Created by Tamas Banyai</div>
+</div>
+
+<div class="new_line"> <br \></div>
 
 </div>
 </div>
