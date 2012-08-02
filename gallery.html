@@ -103,6 +103,50 @@ div.author
 
 <div class="new_line"> <br \></div>
 
+<h4>Inviscid flow over NACA-0012 airfoil, Mach 0.08, Attack angle 6.7°</h4>
+<div class="left_column">
+<div class="img">
+<a href="images/sdm_euler_naca.jpg"><img src="images/sdm_euler_naca.jpg" alt="Inviscid flow past NACA-0012"></a>
+<div class="desc">Pressure contours, Mach 0.08, alpha 6.7°</div>
+</div>
+</div>
+<div class="right_column">
+<p>
+  Simulation of 2D inviscid flow past NACA-0012 airfoil with Mach=0.08, angle of attack 6.7° <br \>
+  <br \>
+  Euler equations are solved with a 3rd order Spectral Difference method 
+  on a 6,666-element unstructured quadrangular mesh.<br \>
+  <br \>
+  High-order visualization is done with Gmsh.
+  <div class="author"> Created by Willem Deconinck</div>
+</p>
+</div>
+
+<div class="new_line"> <br \></div>
+
+<h4>Inviscid flow past wedge, Mach 0.38</h4>
+<div class="left_column">
+<div class="img">
+<a href="images/sdm_euler_wedge.png"><img src="images/sdm_euler_wedge.png" alt="Inviscid flow past cylinder, Mach number 0.38"></a>
+<div class="desc">Density for inviscid flow past wedge, Mach 0.2</div>
+</div>
+</div>
+<div class="right_column">
+<p>
+  Simulation of 2D inviscid flow past triangular wedge  with Mach=0.2. 
+  Vortex shedding occurs due to numerical viscosity at the sharp trailing edges of the wedge.<br \>
+  Disclaimer: This is of course not a physical solution.<br \>
+  <br \>
+  Euler equations are solved with a 4th order Spectral Difference method on a 11,686-element quadrangular mesh.
+  Time integration is done with a SD-optimized Explicit Runge-Kutta (18,4) method.<br \>
+  <br \>
+  High-order visualization is done with Gmsh.
+  <div class="author"> Created by Willem Deconinck, Matteo Parsani</div>
+</p>
+</div>
+
+<div class="new_line"> <br \></div>
+
 <h4>Acoustic pulse with vortex</h4>
 
 <div class="left_column">
@@ -124,28 +168,6 @@ div.author
 
 <div class="new_line"> <br \></div>
 
-<h4>Inviscid flow past wedge, Mach 0.38</h4>
-<div class="left_column">
-<div class="img">
-<a href="images/sdm_euler_wedge.png"><img src="images/sdm_euler_wedge.png" alt="Inviscid flow past cylinder, Mach number 0.38"></a>
-<div class="desc">Density for inviscid flow past wedge, Mach 0.2</div>
-</div>
-</div>
-<div class="right_column">
-<p>
-  Simulation of 2D inviscid flow past triangular wedge  with Mach=0.2. 
-  Vortex shedding occurs due to numerical viscosity at the sharp trailing edges of the wedge. <br \>
-  <br \>
-  Euler equations are solved with a 4th order Spectral Difference method on a 11,686-element quadrangular mesh.
-  Time integration is done with a SD-optimized Explicit Runge-Kutta (18,4) method.<br \>
-  <br \>
-  High-order visualization is done with Gmsh.
-  <div class="author"> Created by Willem Deconinck, Matteo Parsani</div>
-</p>
-</div>
-
-<div class="new_line"> <br \></div>
-
 <h4>Mach-cone, Mach 1.5</h4>
 <div class="left_column">
 <div class="img">
@@ -159,7 +181,7 @@ div.author
   Because of the supersonic background flow, the typical mach-cone becomes visible. <br \>
   <br \>
   The Linearized Euler equations (LEE) are solved with a 5th order Spectral Difference method on a 10x10x10-element hexahedral mesh.
-  Time integration is done with a low-storage Explicit Runge-Kutta (3,3) method.
+  Time integration is done with a low-storage Explicit Runge-Kutta (3,3) method. <br \>
   <br \>
   High-order visualization is done by interpolating the high-order polynomial solution from the 10x10x10-element mesh to a 
   fine 100x100x100-element mesh and exporting to Tecplot.
