@@ -103,7 +103,7 @@ body {
     padding-left: 100px;
 }
 
-#header > h1 #title {
+#title {
     display: inline-block;
 
     position: relative;
@@ -116,7 +116,7 @@ body {
     text-shadow: rgba(0, 0, 0, 0.7) 0px -1px 0px;
 }
 
-#header > h1 #subtitle {
+#subtitle {
     display: inline-block;
 
     position: relative;

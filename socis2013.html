@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Coolfluid 3</title>
+    </head>
+    <body>
+        <style type="text/css" scoped="scoped">
+            @import url('style.css') screen;
+        </style>
+        <a id="header" href="/">
+            <h1>
+                <span id="title">Coolfluid 3</span>
+                <br>
+                <span id="subtitle">A Collaborative Simulation Environment</span>
+            </h1>
+        </a>
+        <div id="content">
+            <style type="text/css" scoped="scoped">
+</style>
+<div>
+<h2>ESA Summer of Code in Space Ideas page</h2>
+<p>
+Should our organization be accepted, we will offer students the opportunity to work on our team. Even though the Coolfluid 3 framework lives in the context of scientific computing, we do aim to provide an end-user friendly application, which implies that many kinds of tasks need to be performed:
+<ul>
+<li>Python interface strengthening</li>
+<li>Improving visualization support</li>
+<li>Improve file format support</li>
+<li>Structured and unstructured grid generation</li>
+<li>Numerical model development</li>
+</ul>
+<p>
+Potential students are free to <a href="http://groups.google.com/group/coolfluid-developers">contact us</a> with their own project proposals, or may use the (non-exhaustive) list below to find inspiration. Any project proposal must be well documented and show that some studying of the code was done before finalizing the application. We encourage you to discuss project ideas early on the mailing list or through the github issue system.
+</p>
+<p>
+Students applying to our organization will benefit from working in a small, dynamic team, with a wealth of scientific and non-scientific programming experience. Through the collaborating institutions, access is available to computing resources, allowing for example scalability testing on a computing cluster environment.
+</p>
+<hr>
+<h3>Plasma flow simulation</h3>
+Within the developer institutions of Coolfluid3, between the Royal Military Academy of Belgium and the von Karman Institute a strong cooperation is established in order to develop time-accurate, incompressible fluid flow solver by means of stabilized finite element method. A new branch of this cooperation is to investigate the unsteady/turbulent behavior of plasma flows. Better understanding in this field by means of computational simulations are believed to help the design of experimental facilities, which are the primary tools for ground testing thermal protection system materials. The task of the student is to develop a tool which allows the investigation of the unsteady behavior of plasma torches, based on the already existing flow solver. The student can make extensive use of our Embedded Domain Specific Language to speed up the development of the solver.
+<p>
+The Project will consist of the following tasks:
+</p>
+<ul>
+<li>Literature review: understanding the physical model and selecting validation testcase(s).</li>
+<li>Learning and understanding the structure of our software, in emphasis on embedded domain specific language and Boost::Proto.</li>
+<li>Development of the plasma flow solver both for 2D, 2D axis-symmetric and 3D cases.</li>
+<li>Performing validation (comparison against results available in literature)</li>
+<li>Preparation of unit and performance tests.</li>
+</ul>
+<h4>References</h4>
+<ul>
+  <li><a href="https://github.com/coolfluid/coolfluid3/blob/master/plugins/UFEM/src/UFEM/NavierStokesAssembly.hpp">Current code</a> for our incompressible Navier-Stokes solver</li>
+  <li><a href="http://meca.rma.ac.be/nctam/Computational%20Methods%201/1_Janssens.pdf">Paper</a> about the domain specific language</li>
+  <li><a href"http://www.tfd.chalmers.se/~hani/pdf_files/MargaritaLicThesis.pdf">Thesis</a> describing the flow physics</li>
+</ul>
+<h4>Project category</h4>
+This project requires understanding of the finite element method and preferably experience in fluid simulation. C++ experience is beneficial, but model development is simplified by the use of a domain specific language embedded in C++, avoiding low-level C++ work.
+<h4>Mentors</h4>
+Tamás Bányai, Thierry Magin
+
+<h3>Extending visualization support</h3>
+We currently support writing out basic <a href="http://www.paraview.org/">ParaView</a> files directly. The current writer is not complete, since surface patches are not exported yet, for example. A first step could be the completion of this writer, making use of the VTK library. Full support for our native mesh format could be attained by making use of the ExodusII writer from VTK. It would be nice to have more interactive visualization perhaps using the VTK interface directly. This would for example allow writing out contour plots as the simulation is running. A very interesting extension would be the ability to directly interface with pvserver, allowing interactive online parallel viewing while the simulation runs on a cluster.
+<p>
+As a minimum, the student will develop a fully functional writer/reader using the VTK library.
+</p>
+<h4>References</h4>
+A first implementation of a VTK plugin for coolfluid can be found <a href="https://github.com/coolfluid/coolfluid3/tree/master/plugins/vtk/src/vtk">here</a>. It is currently only used for mesh tetrahedralization.
+<h4>Project category</h4>
+This project requires some C++ experience, and the ability and willingness to learn external APIs, in this case VTK and ParaView. Prior knowledge of numerical simulation is not required. The student can adapt the difficulty: getting the file exporter to work is the first step. After that, depending on student interest and ability, a reader could be implemented or more direct interfacing with VTK/Paraview could be investigated.
+<h4>Mentors</h4>
+Bart Janssens
+<p><hr>
+<h3>Structured mesh generation</h3>
+A fully parallel structured grid generator exists in the code base. The current implementation only supports structured blocks containing straight edges. A natural extension would be to support 3D NURBS blocks, enabling structured grid generation around curved surfaces such as an airfoil.
+<h4>Project category</h4>
+Basic C++ project, requiring some study of NURBS basics. No special use of external libraries is required.
+<h4>Mentors</h4>
+Bart Janssens
+<p><hr>
+</div>
+</div>
+<div id="footer">
+<div>
+  &copy; 2011-2013 The Coolfluid Team
+</div>
+</div>
+</body>
+</html>
