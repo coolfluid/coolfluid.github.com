@@ -73,6 +73,12 @@ Bart Janssens
 <p><hr>
 <h3>Structured mesh generation</h3>
 A fully parallel structured grid generator exists in the code base. The current implementation only supports structured blocks containing straight edges. A natural extension would be to support 3D NURBS blocks, enabling structured grid generation around curved surfaces such as an airfoil.
+<h4>References</h4>
+<ul>
+  <li><a href="https://github.com/coolfluid/coolfluid3/blob/master/cf3/mesh/BlockMesh/BlockData.cpp">Current code</a> for our BlockMesh implemetation</li>
+  <li><a href="https://github.com/coolfluid/coolfluid3/tree/master/test/mesh/BlockMesh">Unit tests</a> for the current mesher</li>
+  <li><a href="http://www.openfoam.org/docs/user/blockMesh.php">BlockMesh format</a> from OpenFoam, which is the basis of our block description data structure</li>
+</ul>
 <h4>Project category</h4>
 Basic C++ project, requiring some study of NURBS basics. No special use of external libraries is required.
 <h4>Mentors</h4>
